@@ -8,3 +8,63 @@ build/
 *.egg-info/
 .DS_Store
 .vscode/
+*.bib
+report.json
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env/
+.env.*
+
+# Packaging
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+*.cover
+*.py,cover
+htmlcov/
+.hypothesis/
+
+# Type checkers / linters / formatters
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# IDE / editor
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.AppleDouble
+.LSOverride
+Icon
+._*
