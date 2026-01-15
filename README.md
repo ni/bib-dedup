@@ -11,10 +11,22 @@ pip install -U pip
 pip install -e .
 ```
 
+Alternatively (one command):
+
+```bash
+make install-dev
+```
+
 ## Usage
 
 ```bash
 bib-dedup input1.bib input2.bib -o merged.bib
+```
+
+If you don’t want to activate the venv, you can also run:
+
+```bash
+.venv/bin/bib-dedup input1.bib input2.bib -o merged.bib
 ```
 
 Optional JSON report:
