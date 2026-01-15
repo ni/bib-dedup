@@ -5,7 +5,7 @@ description = "Deduplicate and merge multiple BibTeX files into one unique union
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "Your Name" }]
+authors = [{ name = "Taylor Riche" }]
 dependencies = [
   "bibtexparser>=1.4.1",
 ]
