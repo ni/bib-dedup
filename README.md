@@ -23,6 +23,13 @@ make install-dev
 bib-dedup input1.bib input2.bib -o merged.bib
 ```
 
+By default, the output BibTeX wraps the `title` field with double braces (e.g., `title = {{My Title}}`) to preserve capitalization in downstream tools.
+To disable this behavior:
+
+```bash
+bib-dedup input1.bib input2.bib -o merged.bib --no-double-brace-titles
+```
+
 If you don’t want to activate the venv, you can also run:
 
 ```bash

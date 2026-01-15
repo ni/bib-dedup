@@ -32,6 +32,13 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Do not write output; just print summary stats.",
     )
+    p.add_argument(
+        "--no-double-brace-titles",
+        dest="double_brace_titles",
+        action="store_false",
+        help="Disable double-bracing the title field in output (may lose capitalization in some BibTeX consumers).",
+    )
+    p.set_defaults(double_brace_titles=True)
     return p
 
 
@@ -51,7 +58,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"Duplicate groups: {len(result.duplicate_groups)}")
         return 0
 
-    write_bib_file(output_path, result.unique_entries)
+    write_bib_file(output_path, result.unique_entries, double_brace_titles=args.double_brace_titles)
 
     if report_path:
         write_report(report_path, result, excluded=excluded)
