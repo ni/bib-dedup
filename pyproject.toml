@@ -1,0 +1,29 @@
+[project]
+name = "bib-dedup"
+version = "0.1.0"
+description = "Deduplicate and merge multiple BibTeX files into one unique union."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "bibtexparser>=1.4.1",
+]
+
+[project.scripts]
+bib-dedup = "bib_dedup.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
